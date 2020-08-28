@@ -1,0 +1,107 @@
+.message {
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 7px solid #579f36;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .2s;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 10;
+
+        @media (max-width: 767px) {
+            width: 80px;
+            height: 80px;
+        }
+
+        &:hover {
+            transform: scale(1.04);
+        }
+}
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        transition: .3s;
+
+        @media (max-width: 767px) {
+            width: 55px;
+            height: 55px;
+        }
+
+        &:hover {
+            transform: rotateX(25deg);
+        }
+    }
+
+    &__form {
+        background-color: white;
+        border: 3px solid #579f36;
+        border-radius: 10px;
+        // border-top: 0px solid #579f36;
+        width: 350px;
+
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        z-index: 99;
+    }
+
+    &__header {
+        // border-top: 3px solid #579f36;
+        border-bottom: 3px solid #579f36;
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &__logo {
+        width: 130px;
+    }
+
+    &__cross {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+
+    &__fields {
+        padding: 10px;
+        width: 100%;
+    }
+
+    &__field {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        width: 170px;
+        height: 30px;
+        margin: 20px auto;
+    }
+
+    &__title {
+        margin: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+.red-text {
+    color: red;
+}

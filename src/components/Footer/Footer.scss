@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+    background-color: #000;
+    position: relative;
+    z-index: 11;
+
+    @media (max-width: 1400px) {
+        padding: 30px 70px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 20px 30px;
+    }
+
+    &__logo {
+        width: 300px;
+
+        @media (max-width: 1080px) {
+            width: 200px;
+        }
+    }
+}
+
+.socials {
+    width: 210px;
+
+    &__link {
+        width: 48px;
+        height: 48px;
+        margin-left: 10px;
+    }
+
+    &__img {
+        width: 48px;
+        height: 48px;
+        margin-left: 10px;
+    }
+}
