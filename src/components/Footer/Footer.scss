@@ -21,21 +21,42 @@
         @media (max-width: 1080px) {
             width: 200px;
         }
+
+        @media (max-width: 500px) {
+            width: 170px;
+        }
+
+        @media (max-width: 420px) {
+            width: 130px;
+        }
     }
 }
 
 .socials {
-    width: 210px;
+    display: flex;
+    justify-content: space-between;
 
     &__link {
         width: 48px;
         height: 48px;
         margin-left: 10px;
+
+        @media (max-width: 600px) {
+            width: 35px;
+            height: 35px;
+            margin-left: 6px;
+        }
     }
 
     &__img {
         width: 48px;
         height: 48px;
         margin-left: 10px;
+
+        @media (max-width: 600px) {
+            width: 35px;
+            height: 35px;
+            margin-left: 6px;
+        }
     }
 }

@@ -21,6 +21,12 @@
             height: 80px;
         }
 
+        @media (max-width: 430px) {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #579f36;
+        }
+
         &:hover {
             transform: scale(1.04);
         }
@@ -36,6 +42,11 @@
             height: 55px;
         }
 
+        @media (max-width: 430px) {
+            width: 35px;
+            height: 35px;
+        }
+
         &:hover {
             transform: rotateX(25deg);
         }
@@ -46,12 +57,17 @@
         border: 3px solid #579f36;
         border-radius: 10px;
         // border-top: 0px solid #579f36;
-        width: 350px;
+        width: 360px;
 
         position: fixed;
         bottom: 15px;
         left: 15px;
         z-index: 99;
+
+        @media (max-width: 480px) {
+            left: 5px;
+            width: 310px;
+        }
     }
 
     &__header {

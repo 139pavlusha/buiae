@@ -6,7 +6,11 @@
 
     @media (max-width: 1080px) {
         height: 600px;
-    }   
+    }
+
+    @media (max-width: 480px) {
+            margin-top: 30px;
+    }
 
     &__bg {
         width: 100%;
@@ -43,6 +47,15 @@
             top: calc(50% - 496px / 2);
             left: calc(50% - 400px / 2);
         }
+
+        @media (max-width: 420px) {
+            width: calc(100% - 20px);
+            left: calc(50% - (100% - 20px) / 2);
+        }
+
+        @media (max-width: 370px) {
+            padding: 20px 10px;
+        }
     }
 
     &__logo {
@@ -50,6 +63,10 @@
 
         @media (max-width: 880px) {
             width: 200px;
+        }
+
+        @media (max-width: 420px) {
+            width: 170px;
         }
     }
 
@@ -62,6 +79,10 @@
         @media (max-width: 880px) {
             font-size: 22px;
         }
+
+        @media (max-width: 420px) {
+            font-size: 18px;
+        }
     }
 
     &__text {
@@ -71,6 +92,18 @@
 
         @media (max-width: 880px) {
             font-size: 16px;
+        }
+
+        @media (max-width: 420px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 370px) {
+            text-align: center;
+        }
+
+        @media (max-width: 330px) {
+            font-size: 15px;
         }
     }
 

@@ -41,6 +41,11 @@
             left: calc(50% - 200px / 2);
             width: 200px;
         }
+
+        @media (max-width: 380px) {
+            width: 150px;
+            left: calc(50% - 150px / 2);
+        }
     }
 
     &__img {

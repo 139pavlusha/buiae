@@ -26,8 +26,13 @@ export default class LangSwitch extends Component {
         ]
     }
 
+    componentWillMount() {
+        this.setLang();
+    }
+
     setCurLang = (name) => {
         if (name === 'English') {
+            localStorage.setItem('LANG', name);
             this.setState({
                 currentLang: { name: 'English', icon: engIMG },
                 othersLang: [
@@ -37,6 +42,7 @@ export default class LangSwitch extends Component {
             });
         }
         if (name === 'Arabian') {
+            localStorage.setItem('LANG', name);
             this.setState({
                 currentLang: { name: 'Arabian', icon: arbIMG },
                 othersLang: [
@@ -46,6 +52,7 @@ export default class LangSwitch extends Component {
             });
         }
         if (name === 'France') {
+            localStorage.setItem('LANG', name);
             this.setState({
                 currentLang: { name: 'France', icon: frcIMG },
                 othersLang: [
@@ -55,6 +62,7 @@ export default class LangSwitch extends Component {
             });
         }
         this.setState({ open: false });
+        window.location.reload();
     }
 
     switch = () => {
@@ -100,15 +108,49 @@ export default class LangSwitch extends Component {
                     <div className="drop__item" onClick={() => this.setCurLang(othersLang[0].name)}>
                         <img className="drop__img" src={othersLang[0].icon} alt="flag" />
                         <p className="drop__lang-name">{othersLang[0].name}</p>
-                        {/* {this.drawAngle(this.state.open)} */}
                     </div>
                     <div className="drop__item drop__item--last" onClick={() => this.setCurLang(othersLang[1].name)}>
                         <img className="drop__img" src={othersLang[1].icon} alt="flag" />
                         <p className="drop__lang-name">{othersLang[1].name}</p>
-                        {/* {this.drawAngle(this.state.open)} */}
                     </div>
                 </div>
             );
+    }
+
+    setLang = () => {
+        const { name } = this.state.currentLang;
+        const LSname = localStorage.getItem('LANG');
+
+        if (name !== LSname) {
+            if (LSname === 'English') {
+                this.setState({
+                    currentLang: { name: 'English', icon: engIMG },
+                    othersLang: [
+                        { name: 'Arabian', icon: arbIMG },
+                        { name: 'France', icon: frcIMG }
+                    ]
+                });
+            }
+            if (LSname === 'Arabian') {
+                this.setState({
+                    currentLang: { name: 'Arabian', icon: arbIMG },
+                    othersLang: [
+                        { name: 'English', icon: engIMG },
+                        { name: 'France', icon: frcIMG }
+                    ]
+                });
+            }
+            if (LSname === 'France') {
+                this.setState({
+                    currentLang: { name: 'France', icon: frcIMG },
+                    othersLang: [
+                        { name: 'Arabian', icon: arbIMG },
+                        { name: 'English', icon: engIMG }
+                    ]
+                });
+            }
+            this.setState({ open: false });
+        }
     }
 
     render() {

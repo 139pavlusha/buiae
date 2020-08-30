@@ -3,21 +3,42 @@ import './QuestionsList.scss';
 
 import Question from './Question/Question';
 
+
+// --------------------LANG--------------------------
+import ENG from '../../../lang/eng/Home';
+import FRA from '../../../lang/fra/Home';
+import ARB from '../../../lang/arb/Home';
+
+const LANG = localStorage.getItem('LANG');
+
+let questions;
+if (LANG === 'France') {
+    questions = FRA.questions;
+}
+else if (LANG === 'Arabian') {
+    questions = ARB.questions;
+}
+else {
+    questions = ENG.questions;
+}
+// --------------------LANG--------------------------
+
+
 export default class QuestionsList extends Component {
 
     render() {
         return (
             <div className="questions">
-                <h2 className="questions__title">Frequently Asked Questions</h2>
-                <p className="questions__desc">If you didn’t find what you were after, <span className="questions__link">contact</span> us directly and we’ll  help.</p>
+                <h2 className="questions__title">{questions.title}</h2>
+                <p className="questions__desc">{questions.desc.part1}<span className="questions__link">{questions.desc.contact}</span> {questions.desc.part2}</p>
 
                 <ul className="questions__list">
-                    <Question caption="What documents should I have for applying? What documents should I have for applying? v" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
-                    <Question caption="Question 2" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
-                    <Question caption="Question 3" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
-                    <Question caption="Question 4" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
-                    <Question caption="Question 5" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
-                    <Question caption="Question 6" answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab amet consectetur adipisicing elit. Laboriosam, aperiam a? Veniam dolorum, ut dignissimos ipsam explicabo quis enim veritatis dolor ex. Quasi commodi asperiores tenetur modi quisquam sequi ab!" />
+                    <Question caption={questions.question1.caption} answer={questions.question1.answer} />
+                    <Question caption={questions.question2.caption} answer={questions.question2.answer} />
+                    <Question caption={questions.question3.caption} answer={questions.question3.answer} />
+                    <Question caption={questions.question4.caption} answer={questions.question4.answer} />
+                    <Question caption={questions.question5.caption} answer={questions.question5.answer} />
+                    <Question caption={questions.question6.caption} answer={questions.question6.answer} />
                 </ul>
             </div>
         );
