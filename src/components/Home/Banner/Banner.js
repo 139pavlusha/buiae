@@ -18,7 +18,7 @@ export default class Banner extends Component {
                     <Info />
                 </div>
 
-                <img src={educationIMG} className="home-banner__logo" alt="old-logo" />
+                {/* <img src={educationIMG} className="home-banner__logo" alt="old-logo" /> */}
             </div>
         );
     }

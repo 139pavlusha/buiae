@@ -20,7 +20,7 @@
     }
 
     &__list {
-        background-color: rgb(12, 10, 10);
+        // background-color: rgb(12, 10, 10);
         position: absolute;
         top: 0;
         left: 0;
@@ -111,4 +111,20 @@
             transform: scaleY(-1);
         }
     }
+}
+
+
+.switch-lang-anim-enter {
+    opacity: 0;
+}
+.switch-lang-anim-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+.switch-lang-anim-exit {
+    opacity: 1;
+}
+.switch-lang-anim-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
 }

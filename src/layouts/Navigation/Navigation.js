@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Navigation.scss';
+
 import LogoIMG from './images/white-logo.png';
 
 import Button from '../../layouts/Button/Button';
@@ -55,19 +57,21 @@ export default class Navigation extends Component {
                     <Burger burgerClass={this.state.burgerClass} />
                 </div>
 
-                <div className="nav__logo">
-                    <img className="nav__img" src={LogoIMG} alt="logo" />
-                </div>
+                <NavLink to="/home">
+                    <div className="nav__logo">
+                        <img className="nav__img" src={LogoIMG} alt="logo" />
+                    </div>
+                </NavLink>
 
                 <div className="nav__right-container">
                     <ul className={this.state.navList}>
-                        <li className="nav__item">{navigation.poltava}</li>
-                        <li className="nav__item">{navigation.ukraine}</li>
-                        <li className="nav__item">{navigation.univercities}</li>
-                        <li className="nav__item">{navigation.cities}</li>
-                        <li className="nav__item">{navigation.about}</li>
+                        <NavLink to="/home"><li className="nav__item">{navigation.poltava}</li></NavLink>
+                        <NavLink to="/ukraine"><li className="nav__item">{navigation.ukraine}</li></NavLink>
+                        <NavLink to="/home"><li className="nav__item">{navigation.univercities}</li></NavLink>
+                        <NavLink to="/home"><li className="nav__item">{navigation.cities}</li></NavLink>
+                        <NavLink to="/home"><li className="nav__item">{navigation.about}</li></NavLink>
 
-                    </ul>
+                    </ul >
                     <div className="nav__lang-switch">
                         <LangSwitch />
                     </div>
@@ -75,8 +79,8 @@ export default class Navigation extends Component {
                     <div className="nav__button">
                         <Button text="Contact us" />
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         );
     }
 }
