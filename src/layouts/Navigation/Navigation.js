@@ -65,19 +65,19 @@ export default class Navigation extends Component {
 
                 <div className="nav__right-container">
                     <ul className={this.state.navList}>
-                        <NavLink to="/home"><li className="nav__item">{navigation.poltava}</li></NavLink>
+                        {/* <NavLink to="/poltava"><li className="nav__item">{navigation.poltava}</li></NavLink> */}
                         <NavLink to="/ukraine"><li className="nav__item">{navigation.ukraine}</li></NavLink>
                         <NavLink to="/home"><li className="nav__item">{navigation.univercities}</li></NavLink>
                         <NavLink to="/home"><li className="nav__item">{navigation.cities}</li></NavLink>
                         <NavLink to="/home"><li className="nav__item">{navigation.about}</li></NavLink>
 
                     </ul >
-                    <div className="nav__lang-switch">
+                    {/* <div className="nav__lang-switch">
                         <LangSwitch />
-                    </div>
+                    </div> */}
 
                     <div className="nav__button">
-                        <Button text="Contact us" />
+                        <Button text={navigation.contact} />
                     </div>
                 </div >
             </div >

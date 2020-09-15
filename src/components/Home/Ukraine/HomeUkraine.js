@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './HomeUkraine.scss';
 
 import bgIMG from './images/bg.jpeg';
@@ -37,9 +38,11 @@ export default class HomeUkraine extends Component {
                     <img className="home-ua__logo" src={logoIMG} alt="Ukraine logo" />
                     <h3 className="home-ua__title">{ukraine.title}</h3>
                     <p className="home-ua__text">{ukraine.text}</p>
-                    <div className="home-ua__button">
-                        <Button text={ukraine.button} />
-                    </div>
+                    <NavLink to="/ukraine">
+                        <div className="home-ua__button">
+                            <Button text={ukraine.button} />
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         );

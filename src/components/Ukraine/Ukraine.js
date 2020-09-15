@@ -5,6 +5,7 @@ import Movie from './Movie/Movie';
 import Universities from './Universities/Universities';
 import Slider from '../../layouts/Slider/Slider';
 import Footer from '../../components/Footer/Footer';
+import Message from '../Message/Message';
 
 import IMG1 from '../../layouts/Slider/imagesUa/1.jpg';
 import IMG2 from '../../layouts/Slider/imagesUa/2.jpg';
@@ -32,6 +33,7 @@ export default class Ukraine extends Component {
                 <Universities />
                 <Slider images={images} />
                 <Footer />
+                <Message />
             </div>
         );
     }

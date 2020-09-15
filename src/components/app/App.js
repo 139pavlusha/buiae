@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import {
     BrowserRouter as Router,
@@ -9,6 +9,7 @@ import {
 import ScrollToTop from "./ScrollToTop";
 import Home from '../Home/Home';
 import Ukraine from '../Ukraine/Ukraine.js';
+import Poltava from '../Poltava/Poltava.js';
 
 export default class App extends Component {
     render() {
@@ -19,6 +20,7 @@ export default class App extends Component {
                     <Route exact path="/" render={() => <Redirect to="/home" />} />
                     <Route path="/home" render={() => <Home />} />
                     <Route path="/ukraine" render={() => <Ukraine />} />
+                    <Route path="/poltava" render={() => <Poltava />} />
                 </div>
             </Router>
         )

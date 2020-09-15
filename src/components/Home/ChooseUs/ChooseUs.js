@@ -10,6 +10,7 @@ import bookIMG from './images/book.png';
 
 
 // --------------------LANG--------------------------
+
 import ENG from '../../../lang/eng/Home';
 import FRA from '../../../lang/fra/Home';
 import ARB from '../../../lang/arb/Home';

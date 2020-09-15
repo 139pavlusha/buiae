@@ -71,6 +71,7 @@ export default {
         ukraine: 'Ukraine',
         univercities: 'Univercities',
         cities: 'Cities',
-        about: 'About us'
+        about: 'About us',
+        contact: 'Contact us'
     }
 }
