@@ -69,7 +69,7 @@ export default class Navigation extends Component {
                         <NavLink to="/ukraine"><li className="nav__item">{navigation.ukraine}</li></NavLink>
                         <NavLink to="/home"><li className="nav__item">{navigation.univercities}</li></NavLink>
                         <NavLink to="/home"><li className="nav__item">{navigation.cities}</li></NavLink>
-                        <NavLink to="/home"><li className="nav__item">{navigation.about}</li></NavLink>
+                        <NavLink to="/about"><li className="nav__item">{navigation.about}</li></NavLink>
 
                     </ul >
                     {/* <div className="nav__lang-switch">
