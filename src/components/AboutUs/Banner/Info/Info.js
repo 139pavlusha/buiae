@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Info.scss';
 
 import Button from '../../../../layouts/Button/Button';
 
 // --------------------LANG--------------------------
 
-import ENG from '../../../../lang/eng/Ukraine';
-import FRA from '../../../../lang/fra/Ukraine';
-import ARB from '../../../../lang/arb/Ukraine';
+import ENG from '../../../../lang/eng/About';
+import FRA from '../../../../lang/fra/About';
+import ARB from '../../../../lang/arb/About';
 
 const LANG = localStorage.getItem('LANG');
 
@@ -32,7 +33,9 @@ export default class Info extends Component {
                 <h1 className="ukraine-info__main-info">{banner.mainInfo}</h1>
 
                 <div className="ukraine-info__button">
-                    <Button text={banner.button} />
+                    <NavLink to="/">
+                        <Button text={banner.button} />
+                    </NavLink>
                 </div>
             </div>
         );

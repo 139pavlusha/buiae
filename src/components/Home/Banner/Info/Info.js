@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Info.scss';
 
 import Button from '../../../../layouts/Button/Button';
 
 
 // --------------------LANG--------------------------
+
 import ENG from '../../../../lang/eng/Home';
 import FRA from '../../../../lang/fra/Home';
 import ARB from '../../../../lang/arb/Home';
@@ -33,7 +35,9 @@ export default class Info extends Component {
                 <h1 className="banner-info__main-info">{info.mainInfo}</h1>
 
                 <div className="banner-info__button">
-                    <Button text={info.button} />
+                    <NavLink to="/about" >
+                        <Button text={info.button} />
+                    </NavLink>
                 </div>
             </div>
         );

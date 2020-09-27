@@ -67,8 +67,8 @@ export default class Navigation extends Component {
                     <ul className={this.state.navList}>
                         {/* <NavLink to="/poltava"><li className="nav__item">{navigation.poltava}</li></NavLink> */}
                         <NavLink to="/ukraine"><li className="nav__item">{navigation.ukraine}</li></NavLink>
-                        <NavLink to="/home"><li className="nav__item">{navigation.univercities}</li></NavLink>
-                        <NavLink to="/home"><li className="nav__item">{navigation.cities}</li></NavLink>
+                        <NavLink to="/universities"><li className="nav__item">{navigation.univercities}</li></NavLink>
+                        <NavLink to="/cities"><li className="nav__item">{navigation.cities}</li></NavLink>
                         <NavLink to="/about"><li className="nav__item">{navigation.about}</li></NavLink>
 
                     </ul >
@@ -77,7 +77,9 @@ export default class Navigation extends Component {
                     </div> */}
 
                     <div className="nav__button">
-                        <Button text={navigation.contact} />
+                        <NavLink to="#footer">
+                            <Button text={navigation.contact} />
+                        </NavLink>
                     </div>
                 </div >
             </div >

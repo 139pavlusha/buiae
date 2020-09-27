@@ -9,7 +9,7 @@ import logoIMG from '../../images/white-logo.png';
 export default class Footer extends Component {
     render() {
         return (
-            <footer className="footer">
+            <footer id="footer" className="footer">
                 <img className="footer__logo" src={logoIMG} alt="logo" />
 
                 <div className="socials">

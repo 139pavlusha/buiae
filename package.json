@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "core-js": "^3.1.4",
     "font-awesome": "^4.7.0",
+    "google-spreadsheet": "^3.0.13",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",

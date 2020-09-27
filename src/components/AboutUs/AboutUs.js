@@ -6,6 +6,7 @@ import Workers from './Workers/Workers';
 import Footer from '../Footer/Footer';
 import Slider from './Slider/Slider';
 import Location from './Location/Location';
+import Message from '../Message/Message';
 
 export default class AboutUs extends Component {
     render() {
@@ -17,6 +18,7 @@ export default class AboutUs extends Component {
                 <Location />
                 <Slider />
                 <Footer />
+                <Message />
             </div>
         );
     }

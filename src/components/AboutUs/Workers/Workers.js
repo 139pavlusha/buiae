@@ -11,21 +11,30 @@ import instIMG from '../../../images/inst.png';
 
 import azizIMG from './images/aziz.jpg';
 
+// --------------------LANG--------------------------
+
+import ENG from '../../../lang/eng/About';
+import FRA from '../../../lang/fra/About';
+import ARB from '../../../lang/arb/About';
+
+const LANG = localStorage.getItem('LANG');
+
+let workers;
+if (LANG === 'France') {
+    workers = FRA.workers;
+}
+else if (LANG === 'Arabian') {
+    workers = ARB.workers;
+}
+else {
+    workers = ENG.workers;
+}
+
+// --------------------LANG--------------------------
+
+
 const images = [azizIMG, azizIMG, azizIMG];
-const slides = [
-    {
-        caption: 'Head of the company',
-        article: 'My name is Aziz El Karduhi. I am the chief and owner of BUIAE. I have been living in Ukraine for over 25 years. I come from Morocco, but now I have Ukrainian citizenship. I am a master of sports and honored coach of Ukraine. I have a university degree and now I want to help you get it too. Our country is a country of opportunity!'
-    },
-    {
-        caption: 'Head of the company',
-        article: 'My name is Aziz El Karduhi. I am the chief and owner of BUIAE. I have been living in Ukraine for over 25 years. I come from Morocco, but now I have Ukrainian citizenship. I am a master of sports and honored coach of Ukraine. I have a university degree and now I want to help you get it too. Our country is a country of opportunity!'
-    },
-    {
-        caption: 'Head of the company',
-        article: 'My name is Aziz El Karduhi. I am the chief and owner of BUIAE. I have been living in Ukraine for over 25 years. I come from Morocco, but now I have Ukrainian citizenship. I am a master of sports and honored coach of Ukraine. I have a university degree and now I want to help you get it too. Our country is a country of opportunity!'
-    }
-]
+const slides = workers.slides;
 
 export default class Workers extends Component {
 
@@ -81,7 +90,7 @@ export default class Workers extends Component {
 
         return (
             <div className="workers">
-                <h2 className="workers__title">Our workers</h2>
+                <h2 className="workers__title">{workers.title}</h2>
                 <div className="workers__slider">
                     <Slider {...settings}>
                         {this.renderSlides(slides)}
