@@ -24,7 +24,7 @@ export default class Universities extends Component {
         return (
             <div>
                 <div style={{ background: "#000" }}>
-                    <Navigation />
+                    <Navigation bg="black" />
                 </div>
                 <div className="universities">
                     {this.renderUniversities(this.props.universities, this.props.images)}

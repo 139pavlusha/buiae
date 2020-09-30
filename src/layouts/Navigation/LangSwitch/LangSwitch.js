@@ -6,6 +6,7 @@ import arbIMG from './images/arb.jpg';
 import frcIMG from './images/frc.png';
 import sprites from '../../../images/icons-sprite.svg';
 
+
 export default class LangSwitch extends Component {
 
     state = {
@@ -23,7 +24,8 @@ export default class LangSwitch extends Component {
                 name: 'France',
                 icon: frcIMG
             }
-        ]
+        ],
+        bg: this.props.bg
     }
 
     componentWillMount() {
@@ -87,10 +89,11 @@ export default class LangSwitch extends Component {
 
     drawItems = (open) => {
         const { currentLang, othersLang } = this.state;
+
         if (!open)
             return (
-                <div className="drop__list">
-                    <div className="drop__item drop__item--last" onClick={this.switch}>
+                <div className={this.state.bg + ' drop__list'} >
+                    <div className="drop__item drop__item--last" onClick={this.switch} >
                         <img className="drop__img" src={currentLang.icon} alt="flag" />
                         <p className="drop__lang-name">{currentLang.name}</p>
                         {this.drawAngle(this.state.open)}
@@ -99,7 +102,7 @@ export default class LangSwitch extends Component {
             );
         else
             return (
-                <div className="drop__list drop__list--open">
+                <div className={this.state.bg + " drop__list drop__list--open"} >
                     <div className="drop__item" onClick={this.switch}>
                         <img className="drop__img" src={currentLang.icon} alt="flag" />
                         <p className="drop__lang-name">{currentLang.name}</p>
@@ -155,7 +158,7 @@ export default class LangSwitch extends Component {
 
     render() {
         return (
-            <div className="drop">
+            <div className="drop" >
                 {this.drawItems(this.state.open)}
             </div>
         );

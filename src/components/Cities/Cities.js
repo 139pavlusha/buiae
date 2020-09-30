@@ -10,7 +10,7 @@ export default class Cities extends Component {
         return (
             <div>
                 <div style={{ background: "#000" }}>
-                    <Navigation />
+                    <Navigation bg="black" />
                 </div>
                 <CityMenu />
                 <Footer />

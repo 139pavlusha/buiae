@@ -14,7 +14,7 @@ export default class CityPage extends Component {
         return (
             <div>
                 <div style={{ background: "#000" }}>
-                    <Navigation />
+                    <Navigation bg="black" />
                 </div>
                 <div className="city">
                     <h2 className="city__title">{info.title}</h2>
