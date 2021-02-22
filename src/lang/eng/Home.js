@@ -69,7 +69,7 @@ export default {
     navigation: {
         poltava: 'Poltava',
         ukraine: 'Ukraine',
-        univercities: 'Univercities',
+        univercities: 'Universities',
         cities: 'Cities',
         about: 'About us',
         contact: 'Contact us'

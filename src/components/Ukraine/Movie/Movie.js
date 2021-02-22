@@ -34,7 +34,7 @@ export default class Movie extends Component {
                     <p className="ukraine-movie__info">{movie.info2}</p>
                 </div>
 
-                <div class="ukraine-movie__video">
+                <div className="ukraine-movie__video">
                     <ReactPlayer url={movie.link} controls={true} width="100%" height="100%" />
                 </div>
             </div>

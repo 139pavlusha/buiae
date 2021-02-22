@@ -75,13 +75,13 @@ export default class LangSwitch extends Component {
     drawAngle(open) {
         if (open)
             return (
-                <svg class="drop__angle drop__angle--up">
+                <svg className="drop__angle drop__angle--up">
                     <use href={sprites + "#angle-down"} />
                 </svg >
             );
         else
             return (
-                <svg class="drop__angle">
+                <svg className="drop__angle">
                     <use href={sprites + "#angle-down"} />
                 </svg >
             );
@@ -95,7 +95,7 @@ export default class LangSwitch extends Component {
                 <div className={this.state.bg + ' drop__list'} >
                     <div className="drop__item drop__item--last" onClick={this.switch} >
                         <img className="drop__img" src={currentLang.icon} alt="flag" />
-                        <p className="drop__lang-name">{currentLang.name}</p>
+                        <p className="drop__lang-name">{this.translateLang(currentLang.name)}</p>
                         {this.drawAngle(this.state.open)}
                     </div>
                 </div>
@@ -105,19 +105,25 @@ export default class LangSwitch extends Component {
                 <div className={this.state.bg + " drop__list drop__list--open"} >
                     <div className="drop__item" onClick={this.switch}>
                         <img className="drop__img" src={currentLang.icon} alt="flag" />
-                        <p className="drop__lang-name">{currentLang.name}</p>
+                        <p className="drop__lang-name">{this.translateLang(currentLang.name)}</p>
                         {this.drawAngle(this.state.open)}
                     </div>
                     <div className="drop__item" onClick={() => this.setCurLang(othersLang[0].name)}>
                         <img className="drop__img" src={othersLang[0].icon} alt="flag" />
-                        <p className="drop__lang-name">{othersLang[0].name}</p>
+                        <p className="drop__lang-name">{this.translateLang(othersLang[0].name)}</p>
                     </div>
                     <div className="drop__item drop__item--last" onClick={() => this.setCurLang(othersLang[1].name)}>
                         <img className="drop__img" src={othersLang[1].icon} alt="flag" />
-                        <p className="drop__lang-name">{othersLang[1].name}</p>
+                        <p className="drop__lang-name">{this.translateLang(othersLang[1].name)}</p>
                     </div>
                 </div>
             );
+    }
+
+    translateLang = (name) => {
+        if (name === 'English') return ('English');
+        if (name === 'France') return ('Français');
+        if (name === 'Arabian') return ('العربية');
     }
 
     setLang = () => {
